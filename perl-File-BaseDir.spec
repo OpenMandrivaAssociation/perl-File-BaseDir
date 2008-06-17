@@ -1,6 +1,6 @@
 %define module 	File-BaseDir
 %define version 0.03
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Perl module to use the freedesktop basedir spec
 Name: 		perl-%{module}

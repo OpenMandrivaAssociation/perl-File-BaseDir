@@ -1,24 +1,25 @@
-%define module 	File-BaseDir
-%define version 0.03
-%define release %mkrel 4
+%define upstream_name 	 File-BaseDir
+%define upstream_version 0.03
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl module to use the freedesktop basedir spec
-Name: 		perl-%{module}
-Version: 	%{version}
-Release: 	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/File/%{module}-%{version}.tar.gz
+URL:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/File/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl(Module::Build)
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Perl module to use the freedesktop basedir spec.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -39,5 +40,3 @@ rm -rf %{buildroot}
 %doc README Changes
 %{perl_vendorlib}/File/*
 %{_mandir}/*/*
-
-

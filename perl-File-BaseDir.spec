@@ -1,10 +1,10 @@
 %define modname	File-BaseDir
-%define modver	0.03
+%define modver	0.07
 
 Summary:	Perl module to use the freedesktop basedir spec
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	16
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -32,4 +32,3 @@ Perl module to use the freedesktop basedir spec.
 %doc README Changes
 %{perl_vendorlib}/File/*
 %{_mandir}/man3/*
-

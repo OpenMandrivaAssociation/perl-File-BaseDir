@@ -11,6 +11,7 @@ Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/File/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Module::Build)
+BuildRequires:	perl(IPC::System::Simple)
 
 %description
 Perl module to use the freedesktop basedir spec.

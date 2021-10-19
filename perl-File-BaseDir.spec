@@ -19,10 +19,10 @@ BuildRequires:	perl(File::Which)
 Perl module to use the freedesktop basedir spec.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
-%__perl Build.PL installdirs=vendor
+perl Build.PL installdirs=vendor
 ./Build
 
 %check
@@ -34,4 +34,4 @@ Perl module to use the freedesktop basedir spec.
 %files
 %doc README Changes
 %{perl_vendorlib}/File/*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*

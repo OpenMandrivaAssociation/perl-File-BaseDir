@@ -1,14 +1,14 @@
 %define modname	File-BaseDir
-%define modver	0.08
+%define modver	0.09
 
 Summary:	Perl module to use the freedesktop basedir spec
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	2
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/File/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/uperl/File-BaseDir
+Source0:	https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-BaseDir-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Module::Build)

@@ -4,7 +4,7 @@
 Summary:	Perl module to use the freedesktop basedir spec
 Name:		perl-%{modname}
 Version:	%{modver}
-Release:	1
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/uperl/File-BaseDir
@@ -22,14 +22,13 @@ Perl module to use the freedesktop basedir spec.
 %autosetup -p1 -n %{modname}-%{modver}
 
 %build
-perl Build.PL installdirs=vendor
-./Build
-
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 %check
-./Build test
+make test
 
 %install
-./Build install destdir=%{buildroot}
+%make_install
 
 %files
 %doc README Changes
